@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Agendamento</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+
+        <ion-calendar
+                      [type]="type"
+                      [format]="'YYYY-MM-DD'"
+                      [(ngModel)]="calendar"
+        >
+        </ion-calendar>
+        <ion-button (click)="checkCallendar()">Verificar Data</ion-button>
+
+    </div>
+</ion-content>

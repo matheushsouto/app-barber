@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Meus Agendamentos</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let schedule of schedules">
+            <ion-label> Data:{{schedule.date | date: 'dd/MM/yyyy'}}</ion-label>
+            <ion-label> Das {{schedule.startTime}} às {{schedule.endTime}}</ion-label>
+        </ion-item>
+        <ion-title *ngIf="!schedules">Você ainda não possui nenhum agendamento</ion-title>
+    </ion-list>
+
+</ion-content>

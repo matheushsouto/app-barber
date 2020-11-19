@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Noticias</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of news">
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>{{item.title}}</ion-card-title>
+                </ion-card-header>
+                <img src="{{item.link}}">
+                <ion-card-subtitle>
+                    <p>{{item.body}}</p>
+                </ion-card-subtitle>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+</ion-content>

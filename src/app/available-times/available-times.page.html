@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Horários Dispóniveis</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list class="hours-available">
+        <ion-item *ngFor="let date of dates">
+            <ion-button (click)="selectHour(date)">
+                <ion-label>Das {{date.startTime}} às {{date.endTime}} </ion-label>
+            </ion-button>
+        </ion-item>
+        <ion-title *ngIf="!dates">Não há nenhum horário disponivel!</ion-title>
+    </ion-list>
+
+</ion-content>

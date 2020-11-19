@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Login</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <ion-list>
+            <ion-item>
+                <ion-label>Email</ion-label>
+                <ion-input type="email" formControlName="email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Senha</ion-label>
+                <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+
+          <ion-button (click)="login()">Enviar</ion-button>
+          <ion-button (click)="register()">Cadastro</ion-button>
+          <ion-button (click)="forgotPassword()">Esqueceu Senha</ion-button>
+        </ion-list>
+    </form>
+</ion-content>
